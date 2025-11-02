@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* 2. Definisikan Variabel CSS untuk Font */
+/* Anda bisa menempatkan ini di `:root` atau di dalam blok Tailwind `base` */
+@tailwind base;
+
+@theme {
+  /* Definisikan variabel CSS untuk setiap font */
+  /* Nama variabel bisa disesuaikan, misal: --font-heading */
+  --font-sans: 'Inter', sans-serif;
+  --font-headline: 'Quicksand', sans-serif;
+
+  /* Definisikan variabel CSS untuk Warna Anda */
+  --color-primary: #E17E3A; /* Kuning Cerah/Mustard */
+  --color-secondary: #8B5E3C; /* Hijau Daun/Alami */
+  --color-supporting: #9A9A52; /* Hijau Lembut */
+  --color-danger: #F44336; /* Merah Hangat */
+  --color-dark-neutral: #212529; /* Biru Tua/Abu-abu Gelap */
+  --color-light-neutral: #F8F9FA; /* Abu-abu Muda */
+  --color-temuloka-bg: #FAF3E0; /* Warna background utama */
+  --color-temuloka-alt: #FFF8EE; /* Warna background utama */
+
+  /* Untuk shades (jika ingin) */
+  --color-temuloka-orange-500: #E6AC00;
+  --color-temuloka-footer: #8B5E3C; /* Footer */
+  --color-temuloka-orange-100: #FFF0B2; /* Text di footer */
+
+  --color-lime-700: #4CAF50; /* Jika Anda masih ingin merujuk ke warna Tailwind yang ada */
+  --color-lime-100: #E8F5E9;
+  --color-amber-100: #FFFDE7; /* Aproksimasi untuk bg-amber-100 */
+  --color-amber-200: #FFECB3;
+}
+
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: whitesmoke;
+  color: var(--color-dark-neutral);
+}
