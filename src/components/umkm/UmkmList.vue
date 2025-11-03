@@ -1,5 +1,5 @@
 <script setup>
-import ProductCard from '@/components/ui/ProductCard.vue';
+import UmkmCard from '../umkm/UmkmCard.vue';
 
 defineProps({
   products: {
@@ -19,7 +19,7 @@ defineProps({
     </div>
 
     <div v-else class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <ProductCard 
+      <UmkmCard 
         v-for="product in products" 
         :key="product.id" 
         :product="product" 

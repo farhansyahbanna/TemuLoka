@@ -16,7 +16,7 @@ const IconSearch = `
       type="text"
       :value="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
-      placeholder="Cari cookies, minuman, atau paket hemat..."
+      placeholder="Cari makanan, minuman, atau paket hemat..."
       class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
     >
   </div>

@@ -5,7 +5,7 @@ defineProps({
     required: true
   },
   selectedCategory: {
-    type: String,
+    type: String, 
     required: true
   }
 });
@@ -19,16 +19,16 @@ defineEmits(['category-select']);
     <div class="flex items-center gap-3 overflow-x-auto pb-2">
       <button
         v-for="category in categories"
-        :key="category"
-        @click="$emit('category-select', category)"
+        :key="category.id"
+        @click="$emit('category-select', category.id)"
         :class="[
           'px-5 py-2.5 rounded-lg font-semibold text-sm whitespace-nowrap transition-all duration-200 shadow-sm',
-          selectedCategory === category 
+          selectedCategory === category.id 
             ? 'bg-orange-500 text-white shadow-lg' 
             : 'bg-white text-gray-700 hover:bg-gray-100'
         ]"
       >
-        {{ category }}
+        {{ category.name }}
       </button>
     </div>
   </div>
