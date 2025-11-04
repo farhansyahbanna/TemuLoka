@@ -41,9 +41,20 @@ onMounted(() => {
 // (computed properties dan Ikon SVG tetap sama seperti sebelumnya)
 const today = new Date().toLocaleString('en-US', { weekday: 'long' }).toLowerCase();
 
+// (computed property googleMapsLink Anda yang lama)
 const googleMapsLink = computed(() => {
   if (!umkm.value) return '#';
-  return `https://maps.google.com/?q=${umkm.value.coordinates.lat},${umkm.value.coordinates.lng}`;
+  // URL ini untuk tombol "Buka di Google Maps"
+  return `https://www.google.com/maps/search/?api=1&query=${umkm.value.coordinates.lat},${umkm.value.coordinates.lng}`;
+});
+
+// --- TAMBAHKAN COMPUTED BARU DI BAWAH INI ---
+const googleMapsEmbedUrl = computed(() => {
+  if (!umkm.value) return '';
+  const { lat, lng } = umkm.value.coordinates;
+  // URL ini khusus untuk iframe embed
+  // 'q' untuk penanda, 'z' untuk zoom (15=cukup dekat), 'output=embed' untuk iframe
+  return `https://maps.google.com/maps?q=${lat},${lng}&z=15&output=embed`;
 });
 
 const IconLocation = `
@@ -189,11 +200,30 @@ function getUserById(userId) {
 
               <div class="bg-white p-6 shadow-md rounded-lg">
                 <h3 class="text-xl font-bold text-gray-800 mb-4">Lokasi & Kontak</h3>
-                <div class="space-y-3">
+                <div class="space-y-4">
+                  
+                  <div class="h-48 w-full rounded-lg overflow-hidden border border-gray-200">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      frameborder="0"
+                      scrolling="no"
+                      marginheight="0"
+                      marginwidth="0"
+                      :src="googleMapsEmbedUrl"
+                    ></iframe>
+                  </div>
+                  
                   <p class="text-gray-600 text-sm">{{ umkm.address }}</p>
-                  <a :href="googleMapsLink" target="_blank" class="block w-full text-center py-2 px-4 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors">
-                    Lihat Peta
+                  
+                  <a 
+                    :href="googleMapsLink" 
+                    target="_blank" 
+                    class="block w-full text-center py-2 px-4 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors"
+                  >
+                    Buka di Google Maps
                   </a>
+                  
                   <ul class="pt-2 text-sm space-y-2">
                     <li class="flex items-center gap-2">
                       <span v-html="IconPhone" class="text-gray-500"></span>
