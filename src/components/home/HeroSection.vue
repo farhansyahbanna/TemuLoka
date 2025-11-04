@@ -13,7 +13,7 @@
         </p>
         <router-link 
           data-aos="fade-up" 
-          to="/products" 
+          to="/explore-umkm" 
           class="mt-8 inline-block bg-amber-600 text-white px-8 py-3 rounded-lg font-semibold text-balance hover:bg-amber-800 transition-colors">
           Jelajahi Sekarang
         </router-link>

@@ -7,7 +7,8 @@
       
       <div class="hidden md:flex gap-6 text-zinc-600 font-medium">
         <a href="#" class="hover:text-amber-600">Home</a>
-        <a href="#" class="hover:text-amber-600">Fitur</a>
+        <router-link to="/explore-umkm" class="hover:text-amber-600">Jelajahi UMKM</router-link>
+        
         <a href="#" class="hover:text-amber-600">Kategori</a>
         <a href="#" class="hover:text-amber-600">Blog</a>
       </div>
