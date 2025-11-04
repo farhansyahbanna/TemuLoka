@@ -39,10 +39,15 @@ npm run dev
 ### Progres Saat Ini
 
 # Landing Page
-![alt text](image.png)
+![Landing Page](screenshot/image.png)
 
 # Halaman Direktori UMKM
-![alt text](image-1.png)
+![Halaman Direkotir UMKM](screenshot/image-4.png)
 
 # Login & Register
-![alt text](image-2.png)
+![Login & Register](screenshot/image-2.png)
+
+# Halaman Detail UMKM
+![Halaman Detail Umkm](screenshot/image-3.png)
+
+
