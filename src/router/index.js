@@ -5,6 +5,7 @@ import LoginPage from '../views/auth/LoginView.vue';
 import RegisterPage from '../views/auth/RegisterView.vue';
 import ExploreUMKMView from '../views/ExploreUMKMView.vue';
 import UmkmDetailPage from '../views/UmkmDetailView.vue';
+import AboutView from '../views/AboutView.vue';
 
 const routes = [
   {
@@ -36,6 +37,12 @@ const routes = [
     component: UmkmDetailPage,
     props: true 
   },
+  {
+    path: '/about',
+    name: 'About',
+    component: AboutView,
+    
+  }
 ];
 
 // 3. Buat instance router

@@ -52,19 +52,19 @@ const modules = [Autoplay, Pagination, Navigation];
 </template>
 
 <style>
-/* Kustomisasi navigasi Swiper agar lebih pas dengan Tailwind */
+
 .swiper-button-next,
 .swiper-button-prev {
   color: white !important;
   background-color: rgba(0, 0, 0, 0.3);
   padding: 20px;
   border-radius: 50%;
-  width: 15px !important; /* Perkecil ukuran */
-  height: 15px !important; /* Perkecil ukuran */
+  width: 15px !important; 
+  height: 15px !important; 
 }
 .swiper-button-next:after,
 .swiper-button-prev:after {
-  font-size: 1.25rem !important; /* Perkecil ikon panah */
+  font-size: 1.25rem !important; 
   font-weight: 800;
 }
 .swiper-pagination-bullet-active {

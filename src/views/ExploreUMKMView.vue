@@ -96,8 +96,8 @@ function handlePageChange(newPage) {
 </script>
 
 <template>
-  <div class="bg-gray-50 min-h-screen">
-    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+  <div class="min-h-screen bg-linear-to-br from-amber-50 via-white to-amber-25 font-sans text-zinc-800">
+    <div class="container mx-auto  px-2 sm:px-6 lg:px-8 py-8">
       
       <ProductBanner class="mb-10" />
 

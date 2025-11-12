@@ -43,7 +43,7 @@
       <hr class="border-amber-700 my-8">
       
       <p class="text-center text-sm text-amber-300">
-        © {{ new Date().getFullYear() }} TemuLoka. Dukung UMKM Lokal Disekitar Anda Indonesia.
+        © {{ new Date().getFullYear() }} TemuLoka. Dukung UMKM Lokal Disekitar Anda.
       </p>
     </div>
   </footer>

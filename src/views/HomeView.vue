@@ -4,7 +4,8 @@ import ProblemSolutionSection from '@/components/home/ProblemSolutionSection.vue
 import HowItWorksSection from '@/components/home/HowItWorksSection.vue';
 import FeaturedSection from '@/components/home/FeaturedSection.vue';
 import CustomerReviewSection from '@/components/home/CustomerReviewSection.vue';
-import CallToActionSection from '@/components/home/CallToActionSection.vue';
+
+
 </script>
 
 <template>
@@ -12,11 +13,12 @@ import CallToActionSection from '@/components/home/CallToActionSection.vue';
     
     <main>
       <HeroSection />
+      
       <ProblemSolutionSection />
       <HowItWorksSection />
       <FeaturedSection />
       <CustomerReviewSection />
-      <CallToActionSection />
+      
     </main>
   </div>
 </template>
